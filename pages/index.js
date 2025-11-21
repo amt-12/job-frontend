@@ -15,7 +15,7 @@ export default function Home() {
     try {
       const currentSkip = customSkip !== null ? customSkip : (reset ? 0 : skip);
       console.log(`Fetching history with skip=${currentSkip} and take=${take}`);
-      const response = await fetch(`http://localhost:3001/api/history?skip=${currentSkip}&take=${take}`);
+      const response = await fetch(`https://job-backend-f6vs.vercel.app/api/history?skip=${currentSkip}&take=${take}`);
       const data = await response.json();
       if (reset) {
         setHistory(data);
