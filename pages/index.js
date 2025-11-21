@@ -11,12 +11,12 @@ export default function Home() {
     fetchHistory();
   }, []);
 
-  
+
   const fetchHistory = async (reset = false, customSkip = null) => {
     try {
       const currentSkip = customSkip !== null ? customSkip : (reset ? 0 : skip);
       console.log(`Fetching history with skip=${currentSkip} and take=${take}`);
-      const response = await fetch(`https://job-backend-f6vs.vercel.app/api/history?skip=${currentSkip}&take=${take}`);
+      const response = await fetch(`https://job-backend-ivory.vercel.app/api/history?skip=${currentSkip}&take=${take}`);
       const data = await response.json();
       if (reset) {
         setHistory(data);
