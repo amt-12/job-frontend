@@ -11,7 +11,6 @@ export default function Home() {
     fetchHistory();
   }, []);
 
-  
 
   const fetchHistory = async (reset = false, customSkip = null) => {
     try {
